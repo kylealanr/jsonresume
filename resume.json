@@ -76,7 +76,7 @@
     {
       "name": "Android Development",
       "level": "Architect",
-      "keyworkds": [
+      "keywords": [
         "Support Library",
         "Butterknife",
         "Espresso",
@@ -89,7 +89,7 @@
     {
       "name": "Java",
       "level": "Architect",
-      "keyworkds": [
+      "keywords": [
         "Dagger",
         "RxJava",
         "JUnit",
@@ -104,7 +104,7 @@
     {
       "name": "C#",
       "level": "Contribute",
-      "keyworkds": [
+      "keywords": [
         "Task Parallel Library",
         "Reactive Extensions"
       ]
