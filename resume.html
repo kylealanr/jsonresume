@@ -1,471 +1,381 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Kyle Riedemann</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,700|Roboto:300,400,700|Noto+Serif:400" rel="stylesheet" type="text/css">
+<!doctype html>
+<html>
+	<head>
+
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+
+	<title>Kyle Riedemann</title>
+
 	<style>
 	body {
-  font-family: Roboto,Arial,sans-serif;
-  font-weight: 300;
-  background-color: #f6f6f6;
+  background: #EEEEEE;
+  font: 12px "Times New Roman", Times, sans-serif;
+  line-height: 1.4;
+  margin: 40px 0;
 }
-
+em {
+  color: #999;
+}
 p {
-  display: inline;
+  line-height: 1.4;
 }
-
-a,span {
-  color: #4c92c1;
+ul {
+  margin-bottom: 0;
+}
+li {
+  margin-bottom: 2px;
+}
+a {
   text-decoration: none;
 }
 
-.email,.site,.github,.phone-number {
-  margin-bottom: .4em;
-  font-size: .9em;
-}
-
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.card {
-  background-color: #fefefe;
-  box-shadow: 1px 1px 14px -5px rgba(0,0,0,0.5);
-  border-radius: 2px;
-  margin-bottom: 15px;
-}
-
-.header.card {
-  margin-top: 15px;
-  margin-right: 15px;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0 15px 0 20px;
-}
-
-section.card {
-  padding: 15px 15px 22.5px 20px;
-}
-
-.header {
-  overflow: auto;
-  margin-left: 6px;
-  margin-right: 12px;
-}
-
-.skill {
-  font-family: Roboto,Arial,sans-serif;
-  font-size: 1em;
-  margin-bottom: .4em;
-  color: #4c92c1;
-  font-weight: 400;
-}
-
-.skills p {
-  font-size: .9em;
-}
-
-#name {
-  font-family: 'Open Sans',Arial,sans-serif;
-  font-size: 3em;
-  font-weight: 400;
-  color: #555;
-  float: left;
-  margin: .1em .1em .2em;
-}
-
-#resume-container {
-  width: 900px;
+#resume {
   margin: 0 auto;
+  max-width: 600px;
+  padding: 80px 100px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
 }
 
-.section-header {
-  margin-top: 0;
-  margin-bottom: .4em;
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 1.2em;
-}
-
-.left-content {
-  float: left;
-  width: 32%;
-  margin-left: 6px;
-}
-
-.left-content .section-header {
-  font-weight: 400;
-}
-
-.left-content .section-content {
-  font-weight: 300;
-}
-
-.left-content .title {
-  font-weight: 400;
-  margin-bottom: .5em;
-  color: #4c92c1;
-}
-
-.right-content {
-  width: 64%;
-  margin-right: 15px;
-  float: right;
-}
-
-.right-content .section-header {
-  color: #000;
-}
-
-.section-content {
-  overflow: auto;
-}
-
-.title {
-  font-family: Roboto,Arial,sans-serif;
-  font-size: 1em;
-  font-weight: 300;
-  margin-bottom: .2em;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.duration {
-  font-family: Roboto,Arial,sans-serif;
-  font-weight: 300;
-  color: #3c82b1;
-  margin-top: .2em;
-  margin-bottom: .3em;
-}
-
-.occupation {
-  font-size: 1em;
-  font-family: Roboto,Arial,sans-serif;
-  font-weight: 400;
-  margin-bottom: .5em;
-}
-
-.languages {
-  font-family: Roboto,Arial,sans-serif;
-  font-size: .9em;
-  font-weight: 300;
-}
-
-.list {
-  list-style-type: none;
-  font-size: .9em;
-}
-
-.location {
-  font-size: 1em;
-  font-weight: 300;
-  margin-bottom: .1em;
-}
-
-.left {
-  float: left;
-  width: 45%;
-  clear: both;
-}
-
-.right {
-  float: right;
-  width: 55%;
-}
-
-ul.list {
-  list-style-type: circle;
-  padding-left: 1rem;
-}
-
-ul.list li {
-  line-height: 135%;
-  margin-bottom: .2em;
-}
-
-ul.list li:before {
+.coursesList {
+  width: 28%;
+  vertical-align: top;
   display: inline-block;
-  width: 0;
-  margin-left: 0;
 }
 
-.project,.employment,.education,.skills {
-  margin-bottom: .8em;
+.largeFont {
+  font-size: 20px;
 }
 
-.education-info .title {
-  margin-bottom: .2em;
-  line-height: 130%;
+.smallFont {
+  font-size: 12px;
 }
 
-.project-info {
+.sectionBlock {
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  width: 100%;
 }
 
-.last {
-  margin-bottom: 0!important;
+.sectionName {
+  width: 18%;
+  vertical-align: top;
+  display: inline-block;
 }
 
-.term {
-  font-size: 1.75em;
-  font-weight: 200;
-  color: #000;
+.sectionContent {
+  width: 80%;
+  vertical-align: top;
+  display: inline-block;
 }
 
-#skills-container,.contact {
-  margin-bottom: 0;
+.sectionContent ul {
+  padding-left: 20px;
+  margin-top: 6px;
+  list-style-type: circle;
 }
 
-.interests,.subtitle {
-  font-size: .9em;
-  margin-bottom: .2em;
+.sectionContent .title {
+  font-weight: bold;
 }
 
-.project .title,.employment .title {
-  color: #4c92c1;
-  font-weight: 400;
+.sectionContent .date {
+  float: right;
 }
+
+.sectionContent .separator {
+  height: 14px;
+}
+
+.sectionLine {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #CFCFCF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.summary {
+  margin-top: 6px;
+}
+
+.skillBlock {
+  margin-bottom: 4px;
+}
+
+.jobBlock {
+  page-break-inside: avoid;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 40em) {
+  body {
+    margin: 0;
+    font-size: 14px;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0.5em 1em;
+    border: none;
+  }
+  .sectionContent {
+    width: 100%;
+  }
+  .sectionContent .date {
+    padding-right: 2em;
+  }
+  .sectionName {
+    width: auto;
+  }
+  .largeFont {
+    font-size: 20px;
+  }
+  .smallFont {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0px 0px;
+    border: 0px;
+    background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  a {
+    color: black;
+  }
+}
+
 	</style>
-  </head>
-  <body>
-    <div id='resume-container'>
-      <div class='header card'>
-        <h1 id='name'>
-          Kyle Riedemann
-        </h1>
-        <span class='term'>Android Developer</span>
+
+	</head>
+	<body>
+
+	<div id='resume'>
+  <div id='nameBlock' class='largeFont'>
+    <span class='name'>
+      Kyle Riedemann,
+    </span>
+    <span class='label'>Android Developer</span>
+  </div>
+  <div id='basicsBlock' class='smallFont'>
+    <div class='contactBlock'>
+      <span class='email'>kylealanr@gmail.com</span>
+      <span class='divider'>|</span>
+      <span class='phone'>(404) 666-1004</span>
+        <span class='divider'>|</span>
+        <span class='address'>
+          Minneapolis, Minnesota, US
+        </span>
+    </div>
+      <div id='profilesBlock'>
+            <span class='url'>
+              <a href='https://twitter.com/kylealanr'>https://twitter.com/kylealanr</a>
+            </span>
+            <span class='divider'>|</span>
+            <span class='url'>
+              <a href='https://github.com/kylealanr'>https://github.com/kylealanr</a>
+            </span>
+            
       </div>
-      <div class='left-content'>
-        <section class='card'>
-          <div class='section-header'>Contact</div>
-          <div class='section-content' id='contact'>
-            <div class='contact'>
-              <div class='email'>
-                <a href='mailto:kylealanr@gmail.com'>kylealanr@gmail.com</a>
-              </div>
-		              <div class='site'>
-		                <a href='https://twitter.com/kylealanr'>https://twitter.com/kylealanr</a>
-		              </div>
-		              <div class='site'>
-		                <a href='https://github.com/kylealanr'>https://github.com/kylealanr</a>
-		              </div>
-              <div class='phone-number last'>
-                <a href="tel:(404) 666-1004">(404) 666-1004</a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class='card'>
-          <div class='section-header'>Technical Skills</div>
-          <div class='section-content' id='technical-skills'>
-            <div id='skills-container'>
-			    <div class='skills'>
-			      	<div class='skill'>Android Development</div>
-			      <div class="level">
-			        <em>Advanced</em>
-			      </div>
-					<p>
-						Support Library,
-						Butterknife,
-						Espresso,
-						Picasso,
-						Glide,
-						Fabric,
-						Firebase,
-					</p>
-			    </div>
-			    <div class='skills'>
-			      	<div class='skill'>Java</div>
-			      <div class="level">
-			        <em>Advanced</em>
-			      </div>
-					<p>
-						Dagger,
-						RxJava,
-						JUnit,
-						Mockito,
-						Retrofit,
-						OkHttp,
-						Okio,
-					</p>
-			    </div>
-			    <div class='skills'>
-			      	<div class='skill'>Kotlin</div>
-			      <div class="level">
-			        <em>Advanced</em>
-			      </div>
-					<p>
-						stdlib,
-						RxKotlin,
-						Kotlin Android Extensions,
-					</p>
-			    </div>
-			    <div class='skills'>
-			      	<div class='skill'>Groovy</div>
-			      <div class="level">
-			        <em>Intermediate</em>
-			      </div>
-					<p>
-						Spock,
-						Gradle,
-					</p>
-			    </div>
-			    <div class='skills'>
-			      	<div class='skill'>C#</div>
-			      <div class="level">
-			        <em>Intermediate</em>
-			      </div>
-					<p>
-						Task Parallel Library,
-						Reactive Extensions,
-						Dapper,
-					</p>
-			    </div>
-            </div>
-          </div>
-        </section>
-        <section class='card'>
-          <div class='section-header'>Education</div>
-          <div class='section-content' id='education'>
-            <div class='education last'>
-              <div class='education-info'>
-                <div class='title'>
-                	Bachelor of
-                	Management Information Systems
-                	<br>at  Oklahoma State University </div>
-                <div class='duration'>
-			          2011-05-15
-			          - 2015-05-15
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class='right-content'>
-        <section class='card'>
-          <div class='section-header'>Positions</div>
-          <div class='section-content' id='employment'>
-            <div class='employment'>
-              <div class='employment-info'>
-                <div class='title'>
-                  	<a href='http://one20.com/'>
-                  		ONE20
-                  	</a>
-                  Android Developer
-                </div>
-                <div class='duration'>
-			          2017-03-13
-			          - Present
-                </div>
-              </div>
-              <div class='info'>
-			      <ul class="list">
-			        <li>Implemented the Google Maps BottomSheet from scratch</li>
-			        <li>Built a complex RecyclerView containing information about various trucking related Points of Interest</li>
-			        <li>Revamped continuous integration and delivery for the Android application</li>
-			      </ul>
-              </div>
-            </div>
-            <div class='employment'>
-              <div class='employment-info'>
-                <div class='title'>
-                  	<a href='https://nerdery.com/'>
-                  		The Nerdery
-                  	</a>
-                  Android Developer
-                </div>
-                <div class='duration'>
-			          2016-05-16
-			          - 2017-03-10
-                </div>
-              </div>
-              <div class='info'>
-			      <ul class="list">
-			        <li>Helped ship several successful Android apps, including the HyVee application in the Google Play Store.</li>
-			        <li>Setup continuous integration and deployment for internal library artifacts</li>
-			        <li>Setup continuous integration and automated testing for several Android projects</li>
-			        <li>Revamped discipline standards and guidelines</li>
-			      </ul>
-              </div>
-            </div>
-            <div class='employment'>
-              <div class='employment-info'>
-                <div class='title'>
-                  	<a href=''>
-                  		Paycom
-                  	</a>
-                  Software Developer
-                </div>
-                <div class='duration'>
-			          2015-06-01
-			          - 2016-05-15
-                </div>
-              </div>
-              <div class='info'>
-			      <ul class="list">
-			        <li>Implemented a data access layer and rearchitected an existing Winforms application</li>
-			        <li>Rewrote internal tax form printing library responsible for an annual $20mil revenue</li>
-			      </ul>
-              </div>
-            </div>
-            <div class='employment'>
-              <div class='employment-info'>
-                <div class='title'>
-                  	<a href=''>
-                  		Google Developers Group OSU-Stillwater (Volunteer)
-                  	</a>
-                  Organizer
-                </div>
-                <div class='duration'>
-			          2012-01-01
-			          - 2016-12-31
-                </div>
-              </div>
-              <div class='info'>
-			      <ul class="list">
-			        <li>Helped found a local chapter of a Google outreach group focused on spreading knowledge of their technologies.</li>
-			      </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+  </div>
+  <div class='sectionLine'></div>
+
+  <div id='summaryBlock' class="sectionBlock">
+    <div class='sectionName'>
+      <span>SUMMARY</span>
+    </div>
+    <div class='sectionContent'>
+      <span>I&#x27;m a software developer originally from Edmond, Oklahoma. I graduated from Oklahoma State University with an MIS degree. I live in the Twin Cities and work at a trucking startup called ONE20.</span>
+    </div>
+  </div>
+  <div class='sectionLine'></div>
+
+  <div id='workBlock' class="sectionBlock">
+    <div class='sectionName'>
+      <span>EXPERIENCE</span>
+    </div>
+    <div class='sectionContent'>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          ONE20, Android Developer
+	        </span>
+	        <span class='date'>
+	          2017-03-13 &mdash; Present
+	        </span>
+	      </div>
+	      <div><a href='http://one20.com/'>http://one20.com/</a></div>
+	      <ul class='highlights'>
+	        <li>ONE20 is the trucking industry’s aggressive advocate for better life on the road.</li>
+	        <li>Implemented the Google Maps BottomSheet from scratch</li>
+	        <li>Built a complex RecyclerView containing information about various trucking related Points of Interest</li>
+	        <li>Revamped continuous integration and delivery for the Android application</li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          The Nerdery, Android Developer
+	        </span>
+	        <span class='date'>
+	          2016-05-16 &mdash; 2017-03-10
+	        </span>
+	      </div>
+	      <div><a href='https://nerdery.com/'>https://nerdery.com/</a></div>
+	      <ul class='highlights'>
+	        <li>The Nerdery is a digital strategy consultancy of human-centered designers and software engineers.</li>
+	        <li>Helped ship several successful Android apps, including the HyVee application in the Google Play Store.</li>
+	        <li>Setup continuous integration and deployment for internal library artifacts</li>
+	        <li>Setup continuous integration and automated testing for several Android projects</li>
+	        <li>Revamped discipline standards and guidelines</li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          Paycom, Software Developer
+	        </span>
+	        <span class='date'>
+	          2015-06-01 &mdash; 2016-05-15
+	        </span>
+	      </div>
+	      <div><a href=''></a></div>
+	      <ul class='highlights'>
+	        <li>Implemented a data access layer and rearchitected an existing Winforms application</li>
+	        <li>Rewrote internal tax form printing library responsible for an annual $20mil revenue</li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          Google Developers Group OSU-Stillwater (Volunteer), Organizer
+	        </span>
+	        <span class='date'>
+	          2012-01-01 &mdash; 2016-12-31
+	        </span>
+	      </div>
+	      <div><a href=''></a></div>
+	      <ul class='highlights'>
+	        <li>Helped found a local chapter of a Google outreach group focused on spreading knowledge of their technologies.</li>
+	      </ul>
+	      
+			</div>
+    </div>
+  </div>
+  <div class='sectionLine'></div>
 
 
-        <section class='card' style="margin-bottom: 48px;">
-          <div class='section-header'>References</div>
-          <div class='section-content' id='interests'>
-			      <blockquote class="reference">
-			        I worked closely with Kyle during his first few months at Paycom. He was very eager to learn and picked up new skills and techniques quite quickly. It wasn&#x27;t long before he moved on to be a real leader on his team and proved to be a real asset to the company. I enjoyed my time working with Kyle and would definitely work with him again.
-			      </blockquote>
-			      <div class="name">
-			        — Travis Frels
-			      </div>
-			      <blockquote class="reference">
-			        Kyle is a developer of rare skill and is eager to learn new things. I had the pleasure of working with him and watching him learn new skills and techniques rapidly, while also growing in his appreciation for a disciplined approach to software development. Kyle is a quick study and dives passionately into complex technical topics with great results. I firmly believe that any technical problem that comes his way will be overcome quickly with good engineering practices to boot.
-			      </blockquote>
-			      <div class="name">
-			        — Phillip Martin
-			      </div>
-          </div>
-        </section>
+
+
+	<div id='education' class="sectionBlock">
+    <div class='sectionName'>
+      <span>EDUCATION</span>
+    </div>
+    <div class='sectionContent'>
+      <div class='educationBlock'>
+        <span class='title'>
+          Oklahoma State University
+        </span>
+        <span class='date'>
+          2011-05-15 &mdash; 2015-05-15
+        </span>
+        <div class=''>
+          Bachelor  - Management Information Systems, GPA: 3.8
+        </div>
+      </div>
+      
+    </div>
+	</div>
+  <div class='sectionLine'></div>
+
+	<div id='skills' class="sectionBlock">
+    <div class='sectionName'>
+      <span>SKILLS</span>
+    </div>
+    <div class='sectionContent'>
+      <div class='skillBlock'>
+        <span class='title'>Android Development <em>(Advanced)</em>:</span>
+          <span>Support Library</span>, 
+          <span>Butterknife</span>, 
+          <span>Espresso</span>, 
+          <span>Picasso</span>, 
+          <span>Glide</span>, 
+          <span>Fabric</span>, 
+          <span>Firebase</span>
+      </div>
+      <div class='skillBlock'>
+        <span class='title'>Java <em>(Advanced)</em>:</span>
+          <span>Dagger</span>, 
+          <span>RxJava</span>, 
+          <span>JUnit</span>, 
+          <span>Mockito</span>, 
+          <span>Retrofit</span>, 
+          <span>OkHttp</span>, 
+          <span>Okio</span>
+      </div>
+      <div class='skillBlock'>
+        <span class='title'>Kotlin <em>(Advanced)</em>:</span>
+          <span>stdlib</span>, 
+          <span>RxKotlin</span>, 
+          <span>Kotlin Android Extensions</span>
+      </div>
+      <div class='skillBlock'>
+        <span class='title'>Groovy <em>(Intermediate)</em>:</span>
+          <span>Spock</span>, 
+          <span>Gradle</span>
+      </div>
+      <div class='skillBlock'>
+        <span class='title'>C# <em>(Intermediate)</em>:</span>
+          <span>Task Parallel Library</span>, 
+          <span>Reactive Extensions</span>, 
+          <span>Dapper</span>
       </div>
     </div>
-  </body>
+	</div>
+  <div class='sectionLine'></div>
+
+	<div id='languages' class="sectionBlock">
+    <div class='sectionName'>
+      <span>LANGUAGES</span>
+    </div>
+    <div class='sectionContent'>
+      <span class='language'>English</span>
+      <span class='fluency'><em>(Native speaker)</em></span>
+      
+    </div>
+    <div class='sectionLine'></div>
+	</div>
+
+	<div id='interests' class="sectionBlock">
+    <div class='sectionName'>
+      <span>INTERESTS</span>
+    </div>
+    <div class='sectionContent'>
+      <span class='name'>Emojis</span><!--
+      --><span>, </span>
+      <span class='name'>Concerts</span><!--
+      -->
+    </div>
+    <div class='sectionLine'></div>
+	</div>
+
+	</body>
 </html>
