@@ -5,20 +5,15 @@
     "email": "kylealanr@gmail.com",
     "phone": "(404) 666-1004",
     "website": "http://kyleriedemann.com",
-    "summary": "I'm a software developer originally from Edmond, Oklahoma. I graduated from Oklahoma State University with an MIS degree. I live in the Twin Cities and work at a trucking startup called ONE20.",
+    "summary": "I'm a passionate software developer focusing mostly on Android. I've spent the last few years living in the Twin Cities, but am open to opportunities out of state.",
     "location": {
-      "address": "2904 Lyndale Ave S Apt 207",
+      "address": "2904 Lyndale Ave S Apt 605",
       "postalCode": "MN 55408",
       "city": "Minneapolis",
       "countryCode": "US",
       "region": "Minnesota"
     },
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "kylealanr",
-        "url": "https://twitter.com/kylealanr"
-      },
       {
         "network": "Github",
         "username": "kylealanr",
@@ -32,11 +27,14 @@
       "position": "Android Developer",
       "website": "http://one20.com/",
       "startDate": "2017-03-13",
+      "endDate": "2018-06-17",
       "summary": "ONE20 is the trucking industry’s aggressive advocate for better life on the road.",
       "highlights": [
         "Implemented the Google Maps BottomSheet from scratch",
         "Built a complex RecyclerView containing information about various trucking related Points of Interest",
-        "Revamped continuous integration and delivery for the Android application"
+        "Revamped continuous integration and delivery for the Android application",
+        "Converted the project to Kotlin and introduced the Android Architecture Components",
+        "Lead the initiative to modularize our projects by hosting common components as shared AARs"
       ]
     },
     {
@@ -69,7 +67,8 @@
       "startDate": "2012-01-01",
       "endDate": "2016-12-31",
       "highlights": [
-        "Helped found a local chapter of a Google outreach group focused on spreading knowledge of their technologies."
+        "Helped found a local chapter of a Google outreach group focused on spreading knowledge of their technologies.",
+        "Ran several Google sponsored Android codelabs"
       ]
     }
   ],
@@ -86,20 +85,22 @@
   "skills": [
     {
       "name": "Android Development",
-      "level": "Advanced",
       "keywords": [
+        "ConstraintLayout",
+        "CoordinatorLayout",
+        "Architecture Components",
         "Support Library",
         "Butterknife",
         "Espresso",
         "Picasso",
         "Glide",
         "Fabric",
-        "Firebase"
+        "Firebase",
+        "Fresco"
       ]
     },
     {
       "name": "Java",
-      "level": "Advanced",
       "keywords": [
         "Dagger",
         "RxJava",
@@ -112,16 +113,15 @@
     },
     {
       "name": "Kotlin",
-      "level": "Advanced",
       "keywords": [
         "stdlib",
         "RxKotlin",
-        "Kotlin Android Extensions"
+        "Kotlin Android Extensions",
+        "Coroutines"
       ]
     },
     {
       "name": "Groovy",
-      "level": "Intermediate",
       "keywords": [
         "Spock",
         "Gradle"
@@ -129,7 +129,6 @@
     },
     {
       "name": "C#",
-      "level": "Intermediate",
       "keywords": [
         "Task Parallel Library",
         "Reactive Extensions",
@@ -146,6 +145,9 @@
   "interests": [
     {
       "name": "Emojis"
+    },
+    {
+      "name": "Reading"
     },
     {
       "name": "Concerts"
