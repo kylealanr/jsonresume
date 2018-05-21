@@ -28,7 +28,6 @@
       "website": "http://one20.com/",
       "startDate": "2017-03-13",
       "endDate": "2018-06-17",
-      "summary": "ONE20 is the trucking industry’s aggressive advocate for better life on the road.",
       "highlights": [
         "Implemented the Google Maps BottomSheet from scratch",
         "Built a complex RecyclerView containing information about various trucking related Points of Interest",
@@ -43,7 +42,6 @@
       "website": "https://nerdery.com/",
       "startDate": "2016-05-16",
       "endDate": "2017-03-10",
-      "summary": "The Nerdery is a digital strategy consultancy of human-centered designers and software engineers.",
       "highlights": [
         "Helped ship several successful Android apps, including the HyVee application in the Google Play Store.",
         "Setup continuous integration and deployment for internal library artifacts",
